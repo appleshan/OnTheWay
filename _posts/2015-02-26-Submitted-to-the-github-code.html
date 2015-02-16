@@ -1,0 +1,40 @@
+---
+layout: default
+title: 向github提交代码
+---
+<h2>{{ page.title }}</h2>
+<p>
+首先要有 git
+
+0、在github下创建目录
+如：OnTheWay
+
+1、进入代码所在目录
+$ cd ~/workspace/github-blog
+
+2、初始化
+$ git init
+
+3、将本目录下的文件添加
+$ git add .
+
+4、提交并增加注释
+$ git commit -am "first post"
+
+如果没有-m选项添加注释，则会出现$git commit -m "hello,i will commit "的错误
+
+5、提交到远程服务器上的指定目录
+例如：appleshan 用户下的 OnTheWay 目录
+$ git remote add origin git@github.com:appleshan/OnTheWay.git
+或者
+$ git remote add origin https://github.com/appleshan/OnTheWay.git
+
+6、将其 push 到指定分支，其中 gh-pages 是远程分支，origin 是前面创建的本地名称
+$ git push origin gh-pages
+
+7、以后每次新增或修改了文件，提交命令依次为：
+$ git add .
+$ git commit -am "新增或修改了 XXX 文件……"
+$ git push origin gh-pages
+</p>
+<p>{{ page.date | date_to_string }}</p>
