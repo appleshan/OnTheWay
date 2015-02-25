@@ -189,7 +189,7 @@ $(document).ready(function(){
         }
     })();
 
-    $.getScript('/js/prettify/prettify.js',function(){
+    $.getScript('/OnTheWay/js/prettify/prettify.js',function(){
         prettyPrint();
     });
 
@@ -198,7 +198,7 @@ $(document).ready(function(){
     }
 
     if(/css3-animation/.test(location.href)){
-        $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
-        $.getScript('/js/css3-ani.js',function(){});
+        $("head").append("<link rel='stylesheet' type='text/css' href='/OnTheWay/css/css3-ani.css'/>");
+        $.getScript('/OnTheWay/js/css3-ani.js',function(){});
     }
 });
